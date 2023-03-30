@@ -1,4 +1,4 @@
-# Math-magicians-setup
+# react-bookstore
 
 <!-- TABLE OF CONTENTS -->
 
@@ -28,11 +28,11 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# Math-magicians-setup<a name="about-project"></a>
+# react-bookstore<a name="about-project"></a>
 
->  This is the first project of the Math Magicians application.
+>  This is a single page application that allows users to display a list of books, Add a book and Remove a selected book.
 
-**[Math-magicians-setup]** 
+**[react-bookstore]** 
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -49,7 +49,7 @@
 
 ### Key Features <a name="key-features"></a>
 
-- Environment and tools required for a REACT project
+- A books page that displays a list of books and their authors
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -76,8 +76,8 @@ Clone this repository to your desired folder:
 
 
 ```sh
-  cd Math-magicians-setup
-  git clone https://github.com/Lornakaboro/Math-magicians-setup.git
+  cd react-bookstore
+  git clone https://github.com/Lornakaboro/react-bookstore.git
 ```
 
 ### Install
@@ -87,7 +87,7 @@ Install this project with:
 
 
 ```sh
-  cd Math-magicians-setup
+  cd react-bookstore
   node version 16 or higher
 ```
 
@@ -134,8 +134,10 @@ You can deploy this project using:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ]  Calculator App
-- [ ] more interactive web page
+- [ ]  Adds reducers and actions
+- [ ] Use Redux in React components
+- [ ] Connect to API
+- [ ] A more apealing web-page with styling
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
