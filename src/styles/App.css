@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.nav-items {
+  display: flex;
+  justify-content: space-between;
+  padding: 5% 15% 5% 5%;
+}
+
+.nav-items li {
+  list-style: none;
+}
+
+.nav-items li a {
+  text-decoration: none;
+}
+
+.home-page {
+  padding-left: 5%;
+}
+
+.books {
+  padding: 2% 0;
+}
+
+.book-input {
+  display: flex;
+  gap: 2%;
+}
+
+#book-categories {
+  display: flex;
+  justify-content: center;
+}
