@@ -5,6 +5,9 @@ import { deleteBook } from '../redux/books/booksSlice';
 
 const Book = ({ book }) => {
   const dispatch = useDispatch();
+  const handleDeleteClick = () => {
+    dispatch(deleteBook(book.id));
+  };
   return (
     <>
       <p key={book.id}>
@@ -16,9 +19,7 @@ const Book = ({ book }) => {
       </p>
       <button
         type="button"
-        onClick={() => {
-          dispatch(deleteBook(book.id));
-        }}
+        onClick={handleDeleteClick}
       >
         Delete
       </button>
