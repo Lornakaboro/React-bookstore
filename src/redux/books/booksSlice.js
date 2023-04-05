@@ -1,23 +1,49 @@
 import { createSlice } from '@reduxjs/toolkit';
+import produce from 'immer';
 
-const initialBookState = {
-  books: [],
+const bookItems = [
+  {
+    id: 'item1',
+    title: 'The Great Gatsby',
+    author: 'John Smith',
+    category: 'Fiction',
+  },
+  {
+    id: 'item2',
+    title: 'Anna Karenina',
+    author: 'Leo Tolstoy',
+    category: 'Fiction',
+  },
+  {
+    id: 'item3',
+    title: 'The Selfish Gene',
+    author: 'Richard Dawkins',
+    category: 'Nonfiction',
+  },
+];
+
+const initialState = {
+  books: [...bookItems],
 };
 
-const bookSlice = createSlice({
-  name: 'book',
-  initialState: initialBookState,
+const booksSlice = createSlice({
+  name: 'books',
+  initialState,
   reducers: {
-    addNewBook: (state, action) => ({
-      ...state,
-      books: [...state.books, action.payload],
+    addNewBook: (state, { payload }) => produce(state, (draftState) => {
+      draftState.books.push({ id: payload.id, title: payload.title, author: payload.author });
     }),
-    removeExistingBook: (state, action) => ({
-      ...state,
-      books: state.books.filter((book) => book.id !== action.payload.id),
-    }),
+    deleteBook: (state, action) => {
+      const bookId = action.payload;
+      return produce(state, (draftState) => {
+        const bookIndex = draftState.books.findIndex((book) => book.id === bookId);
+        if (bookIndex !== -1) {
+          draftState.books.splice(bookIndex, 1);
+        }
+      });
+    },
   },
 });
 
-export const { addNewBook, removeExistingBook } = bookSlice.actions;
-export default bookSlice.reducer;
+export const { addNewBook, deleteBook } = booksSlice.actions;
+export default booksSlice.reducer;
