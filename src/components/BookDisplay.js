@@ -10,7 +10,7 @@ const Book = ({ book }) => {
   };
   return (
     <>
-      <p key={book.id}>
+      <p key={book.id} className="books">
         <strong>{book.title}</strong>
         {' '}
         <span>by</span>

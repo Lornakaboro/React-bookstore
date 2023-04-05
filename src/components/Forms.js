@@ -7,7 +7,7 @@ const NewBookForm = () => {
   const dispatch = useDispatch();
   const [bookInfo, setBookInfo] = useState({ title: '', author: '' });
 
-  const handleSubmit = (event) => {
+  const handleFormSubmit = (event) => {
     event.preventDefault();
     const id = uuid();
     const book = { id, ...bookInfo };
@@ -21,7 +21,7 @@ const NewBookForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleFormSubmit} className="book-input">
       <input
         type="text"
         name="title"
