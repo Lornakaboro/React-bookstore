@@ -19,21 +19,30 @@ const NewBookForm = () => {
   };
 
   return (
-    <form onSubmit={handleFormSubmit}>
-      <input
-        type="text"
-        name="title"
-        placeholder="Title"
-        required
-      />
-      <input
-        type="text"
-        name="author"
-        placeholder="Author"
-        required
-      />
-      <button type="submit">Add New Book</button>
-    </form>
+    <div className="book-input">
+      <div className="hr" />
+      <h3 className="addTitle Text-Style-10">
+        ADD NEW BOOK
+      </h3>
+      <form onSubmit={handleFormSubmit} className="form-input">
+
+        <input
+          type="text"
+          name="title"
+          placeholder="Title"
+          className="form-input"
+          required
+        />
+        <input
+          type="text"
+          name="author"
+          placeholder="Author"
+          className="form-input"
+          required
+        />
+        <button type="submit" className="add-btn">ADD BOOK</button>
+      </form>
+    </div>
   );
 };
 
