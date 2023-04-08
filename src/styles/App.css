@@ -292,8 +292,6 @@ div[role='progressbar']::before {
   background-color: var(--white-two);
 }
 
-
-
 .addTitle {
   width: 10.875rem;
   height: 1.5rem;
