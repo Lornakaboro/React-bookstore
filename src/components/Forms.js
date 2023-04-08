@@ -20,7 +20,7 @@ const NewBookForm = () => {
 
   return (
     <div className="book-input">
-      <div className="hr" />
+      {/* <div className="hr" /> */}
       <h3 className="addTitle Text-Style-10">
         ADD NEW BOOK
       </h3>
@@ -30,14 +30,14 @@ const NewBookForm = () => {
           type="text"
           name="title"
           placeholder="Title"
-          className="form-input"
+          className="title-input"
           required
         />
         <input
           type="text"
           name="author"
           placeholder="Author"
-          className="form-input"
+          className="author-input"
           required
         />
         <button type="submit" className="add-btn">ADD BOOK</button>
