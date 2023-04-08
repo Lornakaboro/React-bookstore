@@ -296,7 +296,7 @@ div[role='progressbar']::before {
   height: 1.5rem;
   margin-left: 3%;
   margin-top: 2%;
-  font-family: Montserrat;
+  font-family: 'Montserrat', sans-serif;
   font-size: 1.25rem;
   font-weight: bold;
   letter-spacing: -0.18px;
