@@ -50,13 +50,12 @@ nav {
   display: flex;
   align-items: center;
   width: 60%;
-  justify-content: space-between;
 }
 
 .nav-items {
   display: flex;
   justify-content: space-between;
-  width: 45%;
+  width: 30%;
 }
 
 nav h2 {
@@ -90,6 +89,7 @@ nav h2 {
   width: 75rem;
   height: 10.625rem;
   margin-left: 10%;
+  margin-top: 3rem;
   padding: 2rem 9.188rem 1.625rem 1.688rem;
   border-radius: 4px;
   border: solid 1px #e8e8e8;
